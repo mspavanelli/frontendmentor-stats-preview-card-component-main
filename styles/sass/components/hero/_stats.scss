@@ -1,0 +1,30 @@
+.stats {
+  @media #{$media-desktop} {
+    display: flex;
+    justify-content: space-between;
+
+    width: 20rem;
+  }
+
+  .stats__item {
+    display: flex;
+    flex-direction: column-reverse;
+
+    & + div {
+      margin-top: 1.5rem;
+    }
+
+    dt {
+      font-size: 0.75rem;
+      color: $statsHeadingsWhite;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      letter-spacing: 0.1rem;
+    }
+
+    dd {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}

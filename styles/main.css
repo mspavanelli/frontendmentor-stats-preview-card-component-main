@@ -20,6 +20,8 @@ body {
   place-items: center;
   background-color: #090b1a;
   margin: 0 1.25rem;
+  min-height: 100vh;
+  height: auto;
 }
 
 main {
@@ -28,14 +30,27 @@ main {
   display: flex;
   flex-direction: column-reverse;
 }
+@media only screen and (max-width : 768px) {
+  main {
+    margin: 4rem auto;
+  }
+}
 @media only screen and (min-width : 769px) {
   main {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 62rem;
   }
 }
 main section {
   padding: 3rem 2rem;
   text-align: center;
+}
+@media only screen and (min-width : 769px) {
+  main section {
+    padding: 4rem;
+    text-align: left;
+  }
 }
 main section h1 {
   color: white;
@@ -43,6 +58,12 @@ main section h1 {
   font-family: "Inter";
   font-weight: 500;
   margin-bottom: 1rem;
+}
+@media only screen and (min-width : 769px) {
+  main section h1 {
+    font-size: 2.25rem;
+    width: 24rem;
+  }
 }
 main section h1 strong {
   color: #aa5cdb;
@@ -52,32 +73,57 @@ main section p {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   margin-bottom: 3rem;
+  opacity: 0.8;
 }
-main section dl div {
+@media only screen and (min-width : 769px) {
+  main section p {
+    width: 24rem;
+  }
+}
+
+@media only screen and (min-width : 769px) {
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+  }
+}
+.stats .stats__item {
   display: flex;
   flex-direction: column-reverse;
 }
-main section dl div + div {
+.stats .stats__item + div {
   margin-top: 1.5rem;
 }
-main section dl div dt {
+.stats .stats__item dt {
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   margin-top: 0.5rem;
   letter-spacing: 0.1rem;
 }
-main section dl div dd {
+.stats .stats__item dd {
   font-size: 1.5rem;
   font-weight: 700;
 }
-main aside {
+
+.content__image {
   background-image: url("../../../images/image-header-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.5rem 0.5rem 0 0;
   height: 15rem;
+  background-color: #aa5cdb;
+  filter: brightness(1.1) saturate(1.6) contrast(0.7);
+  background-blend-mode: multiply;
+}
+@media only screen and (min-width : 769px) {
+  .content__image {
+    background-image: url("../../../images/image-header-desktop.jpg");
+    border-radius: 0 0.5rem 0.5rem 0;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
