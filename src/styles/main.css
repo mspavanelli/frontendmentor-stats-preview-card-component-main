@@ -108,7 +108,7 @@ main section p {
 }
 
 .content__image {
-  background-image: url("../../../images/image-header-mobile.jpg");
+  background-image: url("../images/image-header-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,7 +120,7 @@ main section p {
 }
 @media only screen and (min-width : 769px) {
   .content__image {
-    background-image: url("../../../images/image-header-desktop.jpg");
+    background-image: url("../images/image-header-desktop.jpg");
     border-radius: 0 0.5rem 0.5rem 0;
     height: auto;
   }
